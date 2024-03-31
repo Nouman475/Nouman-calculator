@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+header{
+    position: absolute;
+    top: 30px;
+}
+footer{
+    position: absolute;
+    bottom: 30px;
+}
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(120deg, #e9e76f, #6c0a75);
+}
+.circles {
+    position: absolute;
+    display: inline-block;
+    height: 270px;
+    width: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.circle-1 {
+    height: 100px;
+    width: 100px;
+    top: -90px;
+    left: 0px;
+    opacity: 0.8;
+}
+.circle-2 {
+    height: 100px;
+    width: 100px;
+    top: 270px;
+    right: 0px;
+    opacity: 0.8;
+}
+.card {
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(35px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+    padding: 40px;
+    overflow: hidden;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    display: block;
+    position: center;
+    background-color: rgb(240, 244, 247);
+    background: linear-gradient(-70deg, #202020, #000000);
+    color: rgba(255, 255, 255, 0.8);
+}
+body, .card{
+    display: flex;
+    flex-direction: column;
+}
+
+/*===================================Calculator Styling=========================================*/
+
+.calculator {
+    width: 300px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(35px);
+    border-radius: 10px;
+}
+
+/* Style the display area */
+.display {
+    height: 40px;
+    padding: 10px;
+    font-size: 24px;
+    text-align: right;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(35px);
+    color: white;
+}
+
+/* Style the buttons container */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Style the buttons */
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #cccccc;
+    transition: background-color 0.1s ease-in;
+    box-shadow: inset -4px -4px 3px rgba(105, 105, 106, 0.681);
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #a6a3a3;
+}
+
+/* Individual button styles (optional) */
+#red {
+    background-color: #f08080;
+}
+.operator{
+    background-color:rgba(255, 255, 255, 0.1); ;
+    color: rgb(250, 250, 250);
+    font-size: 1.5rem;
+    box-shadow: inset -3px -3px 3px rgba(234, 232, 234, 0.43) ;
+}
+#btn-clear:hover, #btn-equals:hover {
+    background-color: #d74b30;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        padding: 15px;
+        width: 100%;
+    }
+    .circle-1, .circle-2{
+        height: 80px;
+        width: 80px;
+    }
+    .circle-1{
+        left: -30px;
+        top: -60px;
+    }
+    .circle-2{
+        right: -30px;
+        top: 280px;
+    }
+    .circles{
+        width: 70%;
+    }
+    .calculator {
+        width: 250px;
+    }
+    footer,header{
+        padding: 10px 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .card {
+        padding: 15px;
+    }
+    .circle-1, .circle-2{
+        height: 70px;
+        width: 70px;
+    }
+    .circle-1{
+        left: -50px;
+        top: -60px;
+    }
+    .circle-2{
+        right: -40px;
+        top: 290px;
+    }
+    .circles{
+        width: 70%;
+    }
+    .calculator {
+        width: 250px;
+    }
+    footer,header{
+        padding: 10px 20px;
+        text-align: center;
+    }
+}
